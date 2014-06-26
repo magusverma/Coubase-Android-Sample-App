@@ -103,6 +103,7 @@ public class MainActivity extends ActionBarActivity {
 					try {
 					    retrievedDocument.putProperties(updatedProperties);
 					    Log.d(TAG, "updated retrievedDocument=" + String.valueOf(retrievedDocument.getProperties()));
+					    System.out.println("updated retrievedDocument=" + String.valueOf(retrievedDocument.getProperties()));
 					} catch (CouchbaseLiteException e) {
 					    Log.e (TAG, "Cannot update document", e);
 					}
@@ -111,6 +112,7 @@ public class MainActivity extends ActionBarActivity {
 					try {
 					    retrievedDocument.delete();
 					    Log.d (TAG, "Deleted document, deletion status = " + retrievedDocument.isDeleted());
+					    System.out.println("Deleted document, deletion status = " + retrievedDocument.isDeleted());
 					} catch (CouchbaseLiteException e) {
 					    Log.e (TAG, "Cannot delete document", e);
 					}           
